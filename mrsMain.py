@@ -29,7 +29,8 @@ def Rand(start, end, num):
 
 start = 0;
 end = 200;
-number = 20;
+number = 50;
+count = 0;
 
 #create random nuber list to get the data from movieIdList
 randomNumberIdsList = []
@@ -38,7 +39,8 @@ randomNumberIdsList = Rand(start, end, number)
 movieNamesToShow = []
 for list in randomNumberIdsList:
      for i in movieNameList.keys():
-         if int(i) == int(list):
+         if int(i) == int(list)  and count < 20:
+             count += 1;
              movieNamesToShow.append(movieNameList[i]);
 
 
